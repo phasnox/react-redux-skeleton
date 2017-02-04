@@ -1,7 +1,7 @@
 
 # React Redux Skeleton
 
-This project uses [react](https://github.com/facebook/react), [redux](https://github.com/rackt/redux) and [redux-router](https://github.com/rackt/redux-router) as it's basis and forms a skeleton around these tools to allow you to get your app started quickly and easily.
+This project uses [react](https://github.com/facebook/react), [redux](https://github.com/rackt/redux), [redux-router](https://github.com/rackt/redux-router) and [font-awesome]() as it's basis and forms a skeleton around these tools to allow you to get your app started quickly and easily.
 
 This skeleton is suitable for both small and larger apps with multiple routes and numerous components and connecting to APIs.
 
@@ -27,16 +27,6 @@ The skeleton comes with some examples of routing and components:
 1. Counter (demonstrating basic redux usage)
 2. Current converter (more complex data and asynchronous actions with an API middleware)
 
-If you wish to have an entirely clean setup, checkout the `clean` branch.
-
-<!--
-To clean out these examples and start from scratch run:
-
-```
-$ ./bin/clean
-```
--->
-
 
 ## Components & Containers
 
@@ -55,7 +45,7 @@ Many routes will have components that are specific to them and will likely all h
 
 ## State
 
-Your app's store is configured in `config/store.js`.
+Your app's store is configured in `modules/store.js`.
 
 
 ## Modules: actions, reducers and dispatching
@@ -65,7 +55,7 @@ Modules are stored in `modules/`.
 
 ## Routes
 
-Your app's routes are defined in `config/routes.js`.
+Your app's routes are defined in `routes/routes.js`.
 
 
 ## Import aliases
@@ -81,67 +71,13 @@ Webpack is configured to allow you to import your local files via aliases instea
 | images     | assets/images     | `import logo from 'images/logo.png';` |
 | fonts      | assets/fonts      | `src: url('fonts/comic-sans.woff');` |
 
-<!--
-
-## Tools
-
-> **NOTE**: THESE TOOLS ARE NOT YET BUILT
-
-### Adding a new module
-
-To add a new module run:
-
-```
-$ ./bin/module my-module
-```
-
-This will create an empty module at `modules/my-module/` with actions, action types and a reducer.
-
-### Adding a new route
-
-To add a new route run:
-
-```
-$ ./bin/route my-route
-```
-
-This will create a new route at `routes/my-route/` with directories for components and containers. You will still need to add the route with the url you want to `config/routes.js`.
-
-### Adding a new component
-
-To add a new shared component run:
-
-```
-$ ./bin/component my-shared-component
-```
-
-This will create a new component at `shared/components/my-shared-components`.
-
-To add a component to an existing route run:
-
-```
-$ ./bin/component my-route-component --route=my-route
-```
-
-This will create a new component at `routes/my-route/components/my-route-component`.
-
-
-### Adding a new container
-
-To add a new shared container run:
-
-```
-$ ./bin/container my-shared-container
-```
-
-This will create a new container at `shared/containers/my-shared-container`.
-
-To add a component to an existing route run:
-
-```
-$ ./bin/component my-route-container --route=my-route
-```
-
-This will create a new container at `routes/my-route/containers/my-route-container`.
-
--->
+## NOTE: Font-awesome License as of v4.7.0
+- The Font Awesome font is licensed under the SIL OFL 1.1:
+  - http://scripts.sil.org/OFL
+- Font Awesome CSS, LESS, and Sass files are licensed under the MIT License:
+  - https://opensource.org/licenses/mit-license.html
+- The Font Awesome documentation is licensed under the CC BY 3.0 License:
+  - http://creativecommons.org/licenses/by/3.0/
+- Attribution is no longer required as of Font Awesome 3.0, but much appreciated:
+  - `Font Awesome by Dave Gandy - http://fontawesome.io`
+- Full details: http://fontawesome.io/license/
