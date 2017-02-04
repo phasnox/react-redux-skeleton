@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Icon } from 'components/icon'
 
 import styles from './counter.scss';
 
@@ -8,9 +9,13 @@ export class Counter extends Component {
 
     return (
       <div className={ styles.default }>
-        <button onClick={ onDecrement }>-</button>
+        <button onClick={ onDecrement }>
+          <Icon className='minus' />
+        </button>
         { count }
-        <button onClick={ onIncrement }>+</button>
+        <button onClick={ onIncrement }>
+          <Icon className='plus' />
+        </button>
       </div>
     );
   }

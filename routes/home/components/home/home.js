@@ -4,6 +4,7 @@ import { Header } from 'components/header';
 import { Wrapper } from 'components/wrapper';
 import { Counter } from 'components/counter';
 import { Currency } from 'components/currency';
+import { Icon } from 'components/icon'
 
 export class Home extends Component {
   render() {
@@ -48,6 +49,10 @@ export class Home extends Component {
         <Wrapper title='Reused counter'>
           <p>This second instance of the counter uses the same state.</p>
           { counterElement }
+        </Wrapper>
+
+        <Wrapper title='Spinner'>
+          <Icon className='spinner spin'/>
         </Wrapper>
       </div>
     );

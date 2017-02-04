@@ -2,6 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
+  devtool: 'cheap-module-source-map',
   entry: path.join(__dirname, 'index'),
   output: {
     path: path.join(__dirname, '/dist'),
@@ -58,5 +59,12 @@ module.exports = {
         include: path.join(__dirname, 'assets/fonts')
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    })
+  ],
 };
