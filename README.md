@@ -19,6 +19,30 @@ Run the local server with:
 $ npm start
 ```
 
+Or, if you have docker-compose just run
+
+```
+docker-compose up
+```
+
+
+## About this fork
+
+This project is a fork from lsjroberts [react-redux-skeleton](https://github.com/lsjroberts/react-redux-skeleton), adding the following:
+
+1. **Dockerfile and docker-compose.yml**. To get the docker container up and
+   running do: `docker-compose up`, you can access the server on
+   http://localhost:8077/. The first time, you will also need to run `docker
+   exec -it reactreduxskeleton_app_1 setup`
+2. **Nginx config**. The app runs behind an nginx server so it can be paired up
+   with any API application you have. Just edit and or replace 
+   the `location /api` in `conf/app_nginx.conf`.
+3. **Fontawesome**. Also added an `<Icon />` component for ease of use(see the
+   example)
+4. **Production conf**: Production ready configuration files for nginx and
+   docker
+
+
 
 ## Examples
 
@@ -26,6 +50,7 @@ The skeleton comes with some examples of routing and components:
 
 1. Counter (demonstrating basic redux usage)
 2. Current converter (more complex data and asynchronous actions with an API middleware)
+
 
 
 ## Components & Containers
@@ -43,9 +68,11 @@ Generic components and containers that you are likely to reuse across multiple r
 Many routes will have components that are specific to them and will likely all have their own container. These should be kept in `routes/my-route/`.
 
 
+
 ## State
 
 Your app's store is configured in `modules/store.js`.
+
 
 
 ## Modules: actions, reducers and dispatching
@@ -53,9 +80,11 @@ Your app's store is configured in `modules/store.js`.
 Modules are stored in `modules/`.
 
 
+
 ## Routes
 
 Your app's routes are defined in `routes/routes.js`.
+
 
 
 ## Import aliases
@@ -70,6 +99,8 @@ Webpack is configured to allow you to import your local files via aliases instea
 | styles     | assets/styles     | `@import '~styles/mixins/example';` |
 | images     | assets/images     | `import logo from 'images/logo.png';` |
 | fonts      | assets/fonts      | `src: url('fonts/comic-sans.woff');` |
+
+
 
 ## NOTE: Font-awesome License as of v4.7.0
 - The Font Awesome font is licensed under the SIL OFL 1.1:
