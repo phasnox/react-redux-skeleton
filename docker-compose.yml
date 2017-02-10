@@ -1,12 +1,12 @@
 version: '2'
 services:
-    app:
-        restart: always
-        ports:
-            - 80:80
-        image: app:app
-        build: .
-        volumes:
-            - /var/log/app
-            - ./:/app
-        command: "start"
+  app:
+    restart: always
+    ports:
+      - 8077:8077
+    image: app:app
+    build: .
+    volumes:
+      - /var/log/app
+      - ./:/app:rw
+    command: "devserver"

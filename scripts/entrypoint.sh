@@ -33,6 +33,10 @@ function start() {
     nginx -g "daemon off;"
 }
 
+function devserver() {
+    nginx && npm start
+}
+
 export -f setup
 export -f watch
 export -f build

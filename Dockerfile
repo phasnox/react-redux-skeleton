@@ -25,13 +25,10 @@ RUN ln -sf /app/conf/app_nginx.conf /etc/nginx/sites-enabled/
 RUN ln -sf /app/ssl/letsencrypt /etc/letsencrypt
 
 # Ports
-EXPOSE 80
+EXPOSE 8077
 
 # Setup volumes
 VOLUME ["/app"]
-
-# For logging
-RUN mkdir -p /var/log/app
 
 WORKDIR /app/
 ENTRYPOINT ["/app/scripts/entrypoint.sh"]
