@@ -6,8 +6,6 @@ RUN apt-get update
 RUN apt-get -y --fix-missing install
 RUN apt-get -y install git
 RUN apt-get -y install nginx
-RUN apt-get update 
-RUN apt-get -y --fix-missing install
 
 #Install certbot
 RUN apt-get -y install certbot -t jessie-backports
@@ -23,9 +21,6 @@ RUN npm install -g webpack
 # Add nginx conf file
 RUN ln -sf /app/conf/app_nginx.conf /etc/nginx/sites-enabled/
 RUN ln -sf /app/ssl/letsencrypt /etc/letsencrypt
-
-# Ports
-EXPOSE 8077
 
 # Setup volumes
 VOLUME ["/app"]

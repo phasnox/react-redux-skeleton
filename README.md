@@ -22,6 +22,8 @@ $ npm start
 Or, if you have docker-compose just run
 
 ```
+docker-compose build
+docker-compose run --rm app setup
 docker-compose up
 ```
 
@@ -30,16 +32,16 @@ docker-compose up
 
 This project is a fork from lsjroberts [react-redux-skeleton](https://github.com/lsjroberts/react-redux-skeleton), adding the following:
 
-1. **Dockerfile and docker-compose.yml**. To get the docker container up and
-   running do: `docker-compose up`, you can access the server on
-   http://localhost:8077/. You will also need to run `docker
-   exec -it reactreduxskeleton_app_1 setup`
-2. **Nginx config**. The app runs behind an nginx server so it can be paired up
-   with any API application you have. Just edit and or replace 
+1. **Dockerfile and docker-compose.yml.** To get the docker container up and
+   running: `docker-compose up`, you can access the server on
+   http://localhost:8077/. 
+2. **Nginx config.** The app runs behind an nginx server so it can be paired up
+   with any API application you have. Just edit and/or replace 
    the `location /api` in `conf/app_nginx.conf`.
 3. **Fontawesome**. Also added an `<Icon />` component for ease of use(see the
    example)
-4. **Production conf**: Production ready configuration files for nginx and
+4. **Initial loading screen.** Adds a pure css animated loading screen.
+4. **Production conf.** Production ready configuration files for nginx and
    docker
 
 **NOTE:** Some file locations have change
@@ -54,6 +56,7 @@ The skeleton comes with some examples of routing and components:
 
 1. Counter (demonstrating basic redux usage)
 2. Current converter (more complex data and asynchronous actions with an API middleware)
+3. Icon demonstration
 
 
 
