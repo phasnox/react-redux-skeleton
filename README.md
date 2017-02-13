@@ -32,7 +32,7 @@ This project is a fork from lsjroberts [react-redux-skeleton](https://github.com
 
 1. **Dockerfile and docker-compose.yml**. To get the docker container up and
    running do: `docker-compose up`, you can access the server on
-   http://localhost:8077/. The first time, you will also need to run `docker
+   http://localhost:8077/. You will also need to run `docker
    exec -it reactreduxskeleton_app_1 setup`
 2. **Nginx config**. The app runs behind an nginx server so it can be paired up
    with any API application you have. Just edit and or replace 
@@ -41,6 +41,10 @@ This project is a fork from lsjroberts [react-redux-skeleton](https://github.com
    example)
 4. **Production conf**: Production ready configuration files for nginx and
    docker
+
+**NOTE:** Some file locations have change
+1. conf/store.js to modules/store.js
+2. conf/routes.js to routes/routes.js
 
 
 
